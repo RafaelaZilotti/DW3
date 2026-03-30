@@ -6,8 +6,9 @@
 5. Escreve 'npm install Fastify'
 6. Crie o server.js na pasta
 7. Crie um script 'dev' no json
-8. Escreva 'node server.js
-9. Escreva 'npm run dev' ou 'npm run dev'
+8. Escreva 'node server.js'
+9. No package.json troque o tipo 'commonjs' por 'module'
+10. Escreva 'npm run dev' ou 'npm run dev'
 
 
 > A porta definida pode ser acessada por meio de um navegador colocando "localhost:(porta)".
