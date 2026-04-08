@@ -15,7 +15,7 @@ em um navegador: "localhost:(porta utilizada)"
 
 
  fastify e express
- - npm install fatify no cmg
+ - npm install fatify no cmd
  - crie um .gitingore e inclua o "node_modules"
 
  extensao THunderbolt??
