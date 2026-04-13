@@ -1,6 +1,6 @@
     // @file: src/CONTROLLER/tarefa.controller.js
 
-    import { listar, criar, buscarPorId, atualizar, remover, obterResumo } from '../models/tarefa.model.js'
+    import { listar, criar, buscarPorId, atualizar, remover, obterResumo, listarPendentes } from '../models/tarefa.model.js'
 
 
     // Processa requisições da rota `GET /tarefas`
@@ -45,6 +45,18 @@
         return reply.send(resumo)
 
     }
+
+    // Processa requisições da rota `GET /tarefas/pendentes`
+    export async function obterPendentes(request, reply) {
+
+        console.log("Controller: obterPendentes chamado")
+
+        const pendentes = await listarPendentes()
+
+        return reply.send(pendentes)
+    }
+
+
 
     // Processa requisições da rota `GET /tarefas/:id`
     export async function obterTarefa(request, reply) { 

@@ -122,3 +122,14 @@ export async function obterResumo() {
     }
     
 }
+
+// Funcao para listar todas as tarefas pendentes (ou seja, aquelas que ainda não foram concluídas).
+export async function listarPendentes() {
+
+  console.log("Model: listarPendentes chamado")
+
+  const pendentes = tarefas.filter(t => t.concluido === false)
+
+  return pendentes
+
+}
