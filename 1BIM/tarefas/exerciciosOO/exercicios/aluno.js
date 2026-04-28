@@ -4,11 +4,11 @@ class Aluno{
         this.notas = [];
     }
 
-    async adicionarNota(nota){
+    adicionarNota(nota){
         this.notas.push(nota) 
     }
 
-    async calcularMedia(){
+    calcularMedia(){
         if ( this.notas.length === 0 )return 0;
 
         const soma = this.notas.reduce((total, nota) => total + nota, 0);
@@ -16,14 +16,14 @@ class Aluno{
 
     }
 
-    async situacao(){
+    situacao(){
         return this.calcularMedia() >= 6 ? "Aprovado" : "Reprovado";
     }
 
-    async exibir(){
+    exibir(){
         console.log(`${this.nome} | Média: ${this.calcularMedia()} | ${this.situacao()}`)
     }
-}
+};
 
 const aluno1 = new Aluno("Ana")
 
