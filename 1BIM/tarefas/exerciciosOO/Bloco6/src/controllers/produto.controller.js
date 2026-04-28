@@ -17,9 +17,13 @@ export default class ProdutoController {
   }
 
   async create(req, reply) {
-    const produto = await this.model.create(req.body)
-    return reply.code(201).send(produto)
-  }
+        const resultado = ProdutoModel.validar(req.body)
+        if (!resultado.valido) {
+            return reply.code(400).send({ erros: resultado.erros })
+        }
+        const produto = await this.model.create(req.body)
+        return reply.code(201).send(produto)
+    }
 
   async delete(req, reply) {
     const removido = await this.model.delete(Number(req.params.id))
