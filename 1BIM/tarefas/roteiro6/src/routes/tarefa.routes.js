@@ -18,6 +18,11 @@ export default async function tarefaRoutes(server, options) {
     controller.obterResumo(request, reply)
   })
 
+  server.get('/tarefas/pendentes',async (request,reply) => {
+    console.log("Routes: GET /tarefas/pendentes chamada")
+    controller.obterPendentes(request, reply)
+  })
+
   server.get('/tarefas/:id', async (request, reply) => {
     console.log("Routes: GET /tarefas/:id chamada")
     controller.obterTarefa(request, reply)

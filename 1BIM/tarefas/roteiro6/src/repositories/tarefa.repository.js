@@ -44,6 +44,11 @@ class TarefaRepository {
     this.tarefas.splice(index, 1)
     return true
   }
+
+  async buscarPendentes() {
+    console.log("Repository: buscarPendentes chamado")
+    return this.tarefas.filter(t => t.concluido === false)
+  }
 }
 
 export default TarefaRepository

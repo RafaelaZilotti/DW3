@@ -61,6 +61,11 @@ class TarefaService {
     const pendentes = total - concluidas
     return { total, concluidas, pendentes }
   }
+
+  async listarPendentes() {
+    console.log("Service: listarPendentes chamado")
+    return this.repository.buscarPendentes()
+  }
 }
 
 export default TarefaService

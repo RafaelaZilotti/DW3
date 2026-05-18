@@ -70,6 +70,12 @@ class TarefaController {
     const resumo = await this.service.obterResumo()
     return reply.send(resumo)
   }
+
+    async obterPendentes(request, reply) {
+        console.log("Controller: obterPendentes chamado")
+        const pendentes = await this.service.listarPendentes()
+        return reply.send(pendentes)
+    }
 }
 
 export default TarefaController
