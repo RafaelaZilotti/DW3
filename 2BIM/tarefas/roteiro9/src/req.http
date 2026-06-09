@@ -1,0 +1,37 @@
+# Teste de ID existente
+
+GET <http://localhost:3000/produtos/1>
+
+## Resposta esperada:
+
+{
+  "status": "success",
+  "data": {
+    "id": 1,
+    "nome": "Teclado",
+    "preco": 150
+  }
+}
+
+# Teste de ID inexistente
+
+GET <http://localhost:3000/produtos/99>
+
+## Resposta esperada:
+
+{
+  "status": "error",
+  "message": "Produto não encontrado"
+}
+
+# Teste de ID inválido (string)
+
+GET <http://localhost:3000/produtos/abc>
+
+## Resposta esperada:
+
+{
+  "status": "error",
+  "message": "ID do produto deve ser um número."
+}
+
